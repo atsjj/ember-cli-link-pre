@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-link-pre",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Automatically add `preconnect` and `preload` `link` tags for your assets.",
   "author": "Steve Jabour <steve@jabour.me> (https://github.com/atsjj)",
   "bugs": "https://github.com/atsjj/ember-cli-link-pre/issues",
