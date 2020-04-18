@@ -1,0 +1,43 @@
+language: node_js
+
+addons:
+  chrome: stable
+
+cache:
+  npm: true
+
+env:
+  global:
+    - JOBS=1
+
+node_js:
+  - '10'
+  - '12'
+  - 'stable'
+
+jobs:
+  fast_finish: true
+  allow_failures:
+    - env: EMBER_TRY_SCENARIO=ember-canary
+  include:
+    - stage: Tests
+      name: Tests
+      script:
+        - npm run lint
+        - npm run test:ember
+    - stage: Additional Tests
+      name: Floating Dependencies
+      install:
+        - npm install --no-package-lock
+      script:
+        - npm run test:ember
+    - env: EMBER_TRY_SCENARIO=ember-lts-3.12
+    - env: EMBER_TRY_SCENARIO=ember-lts-3.16
+    - env: EMBER_TRY_SCENARIO=ember-release
+    - env: EMBER_TRY_SCENARIO=ember-beta
+    - env: EMBER_TRY_SCENARIO=ember-canary
+    - env: EMBER_TRY_SCENARIO=ember-default-with-jquery
+    - env: EMBER_TRY_SCENARIO=ember-classic
+
+script:
+  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO
