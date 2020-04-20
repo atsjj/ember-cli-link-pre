@@ -5,7 +5,7 @@
 
 [npm-badge]: https://img.shields.io/npm/v/ember-cli-link-pre.svg
 [npm-badge-url]: https://www.npmjs.com/package/ember-cli-link-pre
-[travis-badge]: https://img.shields.io/travis/atsjj/ember-cli-link-pre/master.svg?label=TravisCI
+[travis-badge]: https://img.shields.io/travis/com/atsjj/ember-cli-link-pre/master.svg?label=TravisCI
 [travis-badge-url]: https://travis-ci.com/atsjj/ember-cli-link-pre
 [github-actions-badge]: https://github.com/atsjj/ember-cli-link-pre/workflows/CI/badge.svg
 [github-actions-ci-url]: https://github.com/atsjj/ember-cli-link-pre/actions?query=workflow%3ACI
